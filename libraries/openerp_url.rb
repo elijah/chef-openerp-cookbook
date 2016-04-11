@@ -22,6 +22,10 @@ module OpenERP
       node['openerp']['version']
     end
 
+    def openerp_subversion
+      node['openerp']['subversion']
+    end
+
     # '6.1-1', '6.1rc1' => 6.1
     def openerp_short_version
       openerp_version[/\d+\.\d+/].to_f
