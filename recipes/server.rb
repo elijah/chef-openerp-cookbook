@@ -53,7 +53,7 @@ bash 'untar-openerp-server' do
 end
 
 link "#{openerp_path}/server" do
-  to pkg_dir
+  to #{openerp_path}/#{openerp_unix_name}-#{openerp_short_version}-20140804-#{openerp_subversion}
 end
 
 template '/etc/openerp-server.conf' do
