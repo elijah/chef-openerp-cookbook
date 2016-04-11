@@ -27,7 +27,7 @@ include_recipe 'postgresql::client'
 include_recipe 'postgresql::server'
 
 # Create the OpenERP database role
-postgresql_role node['openerp']['user'] do
+postgresql_database_user node['openerp']['user'] do
   role node['openerp']['user']
   password node['openerp']['password']
   action :create
