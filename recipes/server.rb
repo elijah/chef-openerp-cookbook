@@ -52,8 +52,8 @@ bash 'untar-openerp-server' do
   not_if { File.exist?("#{openerp_path}/#{pkg_dir}") }
 end
 
-link "#{openerp_path}/server" do
-  to "#{openerp_path}/#{openerp_unix_name}-#{openerp_short_version}-20140804-#{openerp_subversion}"
+link "/opt/openerp/server" do
+  to "/opt/openerp/#{openerp_unix_name}-#{openerp_short_version}-20140804-#{openerp_subversion}"
 end
 
 template '/etc/openerp-server.conf' do
