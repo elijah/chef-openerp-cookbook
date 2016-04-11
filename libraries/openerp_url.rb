@@ -15,7 +15,7 @@ module OpenERP
     end
 
     def openerp_server_tarball
-      "#{openerp_unix_name}-#{openerp_version}.tar.gz"
+      "#{openerp_unix_name}-#{openerp_version}-#{openerp_subversion}.tar.gz"
     end
 
     def openerp_version
