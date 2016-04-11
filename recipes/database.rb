@@ -28,7 +28,7 @@ include_recipe 'postgresql::server'
 
 # Create the OpenERP database role
 postgresql_database_user node['openerp']['user'] do
-  role node['openerp']['user']
+  #role node['openerp']['user']
   password node['openerp']['password']
   action :create
   superuser true
