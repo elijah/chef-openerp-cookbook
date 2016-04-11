@@ -16,6 +16,6 @@ issues_url 'https://github.com/mburns/chef-openerp-cookbook/issues' if respond_t
   supports os
 end
 
-%w(postgresql openssl).each do |cb|
+%w(postgresql openssl database).each do |cb|
   depends cb
 end
