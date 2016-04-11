@@ -1,7 +1,7 @@
 module OpenERP
   module NameHelper
     def openerp_server_tarball_url
-      "http://nightly.openerp.com/old/openerp-6.1/#{openerp_short_version}/#{openerp_server_tarball}"
+      "http://nightly.openerp.com/old/openerp-#{openerp_short_version}/#{openerp_version}/#{openerp_server_tarball}"
     end
 
     def openerp_unix_name
@@ -15,7 +15,7 @@ module OpenERP
     end
 
     def openerp_server_tarball
-      "#{openerp_unix_name}-#{openerp_version}-#{openerp_subversion}.tar.gz"
+      "#{openerp_unix_name}-#{openerp_short_version}-20140804-#{openerp_subversion}.tar.gz"
     end
 
     def openerp_version
