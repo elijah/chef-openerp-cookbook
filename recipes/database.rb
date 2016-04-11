@@ -34,6 +34,6 @@ postgresql_database_user node['openerp']['user'] do
   superuser true
   createdb true
   createrole true
-  inherit true
+  #inherit true
   login true
 end
