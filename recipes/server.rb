@@ -47,7 +47,7 @@ pkg_dir = "#{openerp_unix_name}-#{openerp_version}"
 bash 'untar-openerp-server' do
   code <<-EOH
     tar zxvf #{Chef::Config['file_cache_path']}/#{openerp_server_tarball} -C #{openerp_path}
-    chown -R openerp: #{openerp_path}/#{pkg_dir}
+    chown -R openerp: #{openerp_path}/#{openerp_unix_name}-#{openerp_short_version}-20140804-#{openerp_subversion}
   EOH
   not_if { File.exist?("#{openerp_path}/#{pkg_dir}") }
 end
