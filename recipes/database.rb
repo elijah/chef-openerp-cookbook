@@ -26,8 +26,16 @@ e.run_action(:run)
 include_recipe 'postgresql::client'
 include_recipe 'postgresql::server'
 
+postgresql_connection_info = {
+  :host     => '127.0.0.1',
+  :port     => node['postgresql']['config']['port'],
+  :username => 'postgres',
+  :password => node['postgresql']['password']['postgres']
+}
+
 # Create the OpenERP database role
 postgresql_database_user node['openerp']['user'] do
+  connection postgresql_connection_info
   #role node['openerp']['user']
   password node['openerp']['password']
   action :create
